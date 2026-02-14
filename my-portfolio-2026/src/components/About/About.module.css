@@ -1,0 +1,156 @@
+.about {
+    padding: 6rem 5%;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.aboutText {
+    line-height: 1.8;
+}
+
+.bio {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+}
+
+.skills {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skillsTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.skillsGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skillCard {
+    background-color: #f8f9fa;
+    padding: 1.2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.skillCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skillInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.skillName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.skillLevel {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #667eea;
+}
+
+.skillBar {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skillProgress {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 4rem 5%;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .aboutContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+    }
+
+    .skills {
+        padding: 1.5rem;
+    }
+
+    .skillsTitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .skills {
+        padding: 1.2rem;
+    }
+
+    .skillInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
