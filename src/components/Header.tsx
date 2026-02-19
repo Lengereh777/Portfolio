@@ -34,18 +34,20 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   };
 
   const isActive = (id: string) => {
-    const sections = ['home', 'about', 'projects', 'contact'];
+    const sections = ['home', 'about', 'projects', 'blog', 'contact'];
     const currentIndex = sections.indexOf(id);
 
     const homeSection = document.getElementById('home');
     const aboutSection = document.getElementById('about');
     const projectsSection = document.getElementById('projects');
+    const blogSection = document.getElementById('blog');
     const contactSection = document.getElementById('contact');
 
     const sectionsTop = [
       homeSection?.offsetTop || 0,
       aboutSection?.offsetTop || 0,
       projectsSection?.offsetTop || 0,
+      blogSection?.offsetTop || 0,
       contactSection?.offsetTop || 0
     ];
 
@@ -106,6 +108,18 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                 }}
               >
                 Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#blog"
+                className={`nav-link ${isActive('blog') ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('blog');
+                }}
+              >
+                Blog
               </a>
             </li>
             <li>
@@ -195,6 +209,18 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               }}
             >
               Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#blog"
+              className={`mobile-nav-link ${isActive('blog') ? 'active' : ''}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('blog');
+              }}
+            >
+              Blog
             </a>
           </li>
           <li>

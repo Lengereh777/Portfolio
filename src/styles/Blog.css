@@ -1,0 +1,349 @@
+/* Blog Section Styles */
+.blog {
+  padding: 100px 0;
+  background: var(--bg-secondary, #0a0a0a);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-color, #6366f1), transparent);
+}
+
+.blog-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Header */
+.blog .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.blog .section-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 20px;
+  color: var(--accent-color, #6366f1);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.blog .section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blog .section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary, #a1a1aa);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Blog Card */
+.blog-card {
+  background: var(--card-bg, #111111);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #1f1f1f);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color, #6366f1);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+}
+
+.blog-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.1);
+}
+
+.blog-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blog-card:hover .blog-card-overlay {
+  opacity: 1;
+}
+
+.blog-card-content {
+  padding: 24px;
+}
+
+/* Blog Card Meta */
+.blog-card-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.blog-card-date,
+.blog-card-read-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted, #71717a);
+}
+
+.blog-card-date svg,
+.blog-card-read-time svg {
+  color: var(--accent-color, #6366f1);
+}
+
+/* Blog Card Title */
+.blog-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.blog-card:hover .blog-card-title {
+  color: var(--accent-color, #6366f1);
+}
+
+/* Blog Card Excerpt */
+.blog-card-excerpt {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #a1a1aa);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Blog Card Tags */
+.blog-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.blog-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: var(--accent-color, #6366f1);
+  transition: all 0.3s ease;
+}
+
+.blog-tag:hover {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+/* Blog Card Link */
+.blog-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-color, #6366f1);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.blog-card-link:hover {
+  gap: 12px;
+  color: var(--accent-hover, #818cf8);
+}
+
+.blog-card-link svg {
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-link svg {
+  transform: translateX(4px);
+}
+
+/* Blog CTA */
+.blog-cta {
+  text-align: center;
+}
+
+.blog-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--accent-color, #6366f1) 0%, var(--accent-hover, #818cf8) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.blog-view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.blog-view-all-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.blog-view-all-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog {
+    padding: 60px 0;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .blog-card-image {
+    height: 180px;
+  }
+
+  .blog-card-content {
+    padding: 20px;
+  }
+
+  .blog-card-title {
+    font-size: 1.1rem;
+  }
+
+  .blog-card-meta {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-content {
+    padding: 0 16px;
+  }
+
+  .blog .section-header {
+    margin-bottom: 40px;
+  }
+
+  .blog-card-image {
+    height: 160px;
+  }
+
+  .blog-card-tags {
+    gap: 6px;
+  }
+
+  .blog-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .blog {
+  background: #050505;
+}
+
+.dark-mode .blog-card {
+  background: #0d0d0d;
+  border-color: #1a1a1a;
+}
+
+/* Light Mode Support */
+@media (prefers-color-scheme: light) {
+  .blog:not(.dark-mode) {
+    background: #f8fafc;
+  }
+
+  .blog:not(.dark-mode) .blog-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+  }
+
+  .blog:not(.dark-mode) .blog-card-title {
+    color: #1f2937;
+  }
+
+  .blog:not(.dark-mode) .blog-card-excerpt {
+    color: #6b7280;
+  }
+
+  .blog:not(.dark-mode) .section-title {
+    background: linear-gradient(135deg, #1f2937 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

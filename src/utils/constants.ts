@@ -92,6 +92,26 @@ export const SKILLS: Skill[] = [
     id: 12,
     name: 'Docker',
     icon: 'docker'
+  },
+  {
+    id: 13,
+    name: 'AWS',
+    icon: 'aws'
+  },
+  {
+    id: 14,
+    name: 'GraphQL',
+    icon: 'graphql'
+  },
+  {
+    id: 15,
+    name: 'REST API',
+    icon: 'rest'
+  },
+  {
+    id: 16,
+    name: 'Figma',
+    icon: 'figma'
   }
 ];
 

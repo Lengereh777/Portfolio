@@ -21,6 +21,10 @@ const About: React.FC = () => {
       case 'mongodb':
       case 'postgresql':
       case 'docker':
+      case 'aws':
+      case 'graphql':
+      case 'rest':
+      case 'figma':
         return <Code size={20} />;
       default:
         return <Code size={20} />;
@@ -102,17 +106,17 @@ const About: React.FC = () => {
 
             <div className="about-description">
               <p>
-                With extensive experience in building complex applications like Amazon Clone, Netflix Clone, and Evangadi
-                Forum, I've developed a deep understanding of the entire development lifecycle from concept to deployment.
+                With hands-on experience building full-stack applications including e-commerce platforms, streaming interfaces,
+                and community forums, I've developed a deep understanding of the entire development lifecycle from concept to deployment.
               </p>
               <p>
                 My approach combines technical expertise with creative problem-solving to deliver solutions that not only
                 meet business requirements but also exceed user expectations. I thrive in collaborative environments and
-                enjoy turning challenges into opportunities.
+                enjoy turning challenges into opportunities for innovation.
               </p>
               <p>
                 When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or sharing knowledge with the developer community.
+                mentoring aspiring developers, or sharing knowledge with the developer community.
               </p>
             </div>
 
