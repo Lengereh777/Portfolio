@@ -1,14 +1,26 @@
-plugins = []
+redirectsOrigin = "config"
 headers = []
 
 [functions]
 
 [functions."*"]
 
+[[plugins]]
+origin = "ui"
+package = "@netlify/plugin-lighthouse"
+
+[plugins.inputs]
+
+[[plugins]]
+origin = "ui"
+package = "@21yunbox/netlify-plugin-21yunbox-deploy-to-china-cdn"
+
+[plugins.inputs]
+
 [build]
 publish = "c:\\Users\\amanu\\OneDrive\\Desktop\\portfolio\\dist"
-publishOrigin = "ui"
-commandOrigin = "ui"
+publishOrigin = "config"
+commandOrigin = "config"
 command = "npm run build"
 
 [build.environment]
