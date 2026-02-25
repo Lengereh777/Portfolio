@@ -9,7 +9,7 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'Next.js', 'Tailwind CSS', 'Firebase', 'Stripe'],
     image: '/amazon-clone.jpg',
     github: 'https://github.com/Lengereh777/Amazon-Project',
-    demo: 'https://github.com/Lengereh777/Amazon-Project'
+    demo: 'https://a-8fccc.firebaseapp.com/'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'Redux', 'Tailwind CSS', 'TMDB API', 'Firebase'],
     image: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=400&h=250&fit=crop',
     github: 'https://github.com/Lengereh777/Netflix-Clone-2025',
-    demo: 'https://github.com/Lengereh777/Netflix-Clone-2025'
+    demo: 'https://whole-gills-85827548.figma.site/'
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io'],
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop',
     github: 'https://github.com/Lengereh777/Evangadi-Forum-2',
-    demo: 'https://github.com/Lengereh777/Evangadi-Forum-2'
+    demo: 'https://evangadi-forum-frontend-production.up.railway.app/login'
   }
 ];
 
