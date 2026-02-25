@@ -43,6 +43,7 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
+    pointer-events: none;
 }
 
 .project-card:hover::before {
@@ -128,6 +129,7 @@
     justify-content: center;
     gap: 1rem;
     transform: translateZ(100px);
+    z-index: 2;
 }
 
 .project-card:hover .project-overlay {
@@ -166,6 +168,8 @@
 .project-content {
     padding: 2rem;
     transform-style: preserve-3d;
+    position: relative;
+    z-index: 2;
 }
 
 .project-tags {
